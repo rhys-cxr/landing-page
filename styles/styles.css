@@ -1,107 +1,159 @@
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Generic (CALLED IN ANOTHER FILE)
-	- Normalize
-	- Box sizing
-	- Media width
-# Base
-	- Typography
-	- Elements
-	- Links
-# Layouts
-# Components
-	- Header
-	- Main
-	- Footer
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-
-/* Typography
---------------------------------------------- */
+/* Base Styles */
 body {
-	
+    background-color: rgb(66, 134, 212);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	
+header {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
 }
 
-p {
-	
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
-
-/* Elements
---------------------------------------------- */
-ul {
-	
+.site-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
-ol {
-	
+/* Intro Section */
+.intro-section {
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
-dl {
-	
+.intro-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-figure {
-	
+.page-sub-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-table {
-	
+.intro-p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Links
---------------------------------------------- */
-a {
-	
+/* Projects Section */
+#projects {
+    text-align: center;
+    padding: 2rem;
 }
 
-a:visited {
-	
+#project-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 auto; /* Ensure project wrapper is centered */
 }
 
-a:hover {
-	
+/* Project Card */
+.project-card {
+    width: 280px; /* Fixed width for all cards */
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-a:focus {
-	
+/* Project Box */
+.project-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 2px solid white;
 }
 
-a:active {
-	
+/* Project Information */
+.project-info {
+    padding: 1rem;
 }
 
+.project-name a {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-/*--------------------------------------------------------------
-# Layout
---------------------------------------------------------------*/
+.project-name a:hover {
+    text-decoration: underline;
+}
 
+.project-description {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #f0f0f0;
+}
 
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
 
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
+/* Navigation Hover State */
+.site-nav a:hover {
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 0.3rem 0.5rem; /* Adjust spacing to ensure alignment stays neat */
+    transition: all 0.3s ease; /* Smooth transition */
+}
 
-/* Header
---------------------------------------------- */
+/* Project Card Hover State */
+.project-card:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Grey veil */
+    transition: background-color 0.9s ease; /* Smooth transition */
+}
 
+/* Responsiveness */
+@media (max-width: 768px) {
+    /* Mobile Navigation Adjustments */
+    .site-nav ul {
+        justify-content: space-evenly; /* Distribute nav items evenly */
+        padding: 0 1rem; /* Padding on sides */
+        gap: 1rem; /* Reduced gap between nav items */
+    }
 
-/* Main
---------------------------------------------- */
+    /* Reducing font size for mobile */
+    .site-nav a {
+        font-size: 0.9rem; /* Smaller font size */
+        padding: 0.3rem; /* Reduced padding */
+    }
 
+    /* Project Cards */
+    .project-card {
+        width: 240px; /* Reduced card width for mobile */
+    }
 
-/* Footer
---------------------------------------------- */
+    #project-wrapper {
+        justify-content: center;
+        gap: 1rem; /* Reduced gap between project cards */
+    }
+}
