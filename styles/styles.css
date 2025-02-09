@@ -1,4 +1,7 @@
 /* Base Styles */
+a {
+  text-decoration: none;  
+}
 body {
     background-color: rgb(66, 134, 212);
     color: white;
@@ -94,15 +97,12 @@ header {
     padding: 1rem;
 }
 
+.project-name,
 .project-name a {
     color: white;
     font-size: 1.1rem;
     font-weight: bold;
     text-decoration: none;
-}
-
-.project-name a:hover {
-    text-decoration: underline;
 }
 
 .project-description {
